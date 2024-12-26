@@ -1,37 +1,24 @@
 /* Main container for alignment */
 .home {
-  background-image: url('./assets/mainblank.png'); /* Restore your background */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
   height: 100vh;
   width: 100vw;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
-/* Ref background styling */
-.ref {
-  background-image: url('./assets/main.png'); /* Add your background */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Wrapper for maintaining relative positions */
+/* Wrapper for fixed aspect ratio */
 .image-wrapper {
-  position: absolute; /* Absolute positioning to maintain control over layout */
-  top: 50%; /* Center the wrapper vertically */
-  left: 50%; /* Center the wrapper horizontally */
-  transform: translate(-50%, -50%); /* Centering */
-  width: 100%; /* Full-width responsiveness */
-  height: 100%; /* Full-height responsiveness */
-  max-width: 1440px; /* Prevent overflow on wider screens */
-  max-height: 1024px; /* Prevent overflow on taller screens */
+  position: relative;
+  width: 100%; /* Adjust width */
+  height: 0;
+  padding-top: 56.25%; /* Aspect ratio: 16:9 */
+  background-image: url('./assets/mainblank.png');
+  background-size: 100% 100%; /* Maintain background scaling */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Common styles for all image containers */
@@ -42,33 +29,33 @@
 
 /* Specific styles for h1 */
 .h1-container {
-  top: 39%;
-  left: 20%;
-  width: 19%; /* Ensure sizing scales proportionally */
+  top: 39%; /* Adjusted for the fixed aspect ratio */
+  left: 26%;
+  width: 15%; /* Scales proportionally */
   height: auto;
 }
 
 /* Specific styles for h2 */
 .h2-container {
-  top: 20%;
-  left: 59%;
-  width: 19%;
+  top: 30%;
+  left: 55%;
+  width: 14%;
   height: auto;
 }
 
 /* Specific styles for h3 */
 .h3-container {
   top: 50%;
-  left: 83%;
-  width: 19%;
+  left: 75%;
+  width: 15%;
   height: auto;
 }
 
 /* Specific styles for h4 */
 .h4-container {
-  top: 71%;
-  left: 19%;
-  width: 19%;
+  top: 68%;
+  left: 30%;
+  width: 15%;
   height: auto;
 }
 
@@ -106,11 +93,11 @@
 @media (max-width: 768px) {
   .image-wrapper {
     max-width: 90%; /* Adjust layout for smaller screens */
-    max-height: auto;
+    height: auto;
   }
 
   .image-container {
-    width: 20%; /* Resize elements */
+    width: 15%; /* Resize elements */
     height: auto;
   }
 }

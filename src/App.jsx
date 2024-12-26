@@ -19,48 +19,46 @@ function Home() {
 
   return (
     <div className="home">
-      {/* h1 + h1h */}
-      <div className="image-container h1-container">
-        <img src={h1} alt="h1" className="base-image" />
-        <img
-          src={h1h}
-          alt="h1h"
-          className="hover-image"
-          onClick={() => handleClick('h1')}
-        />
-      </div>
+      <div className="image-wrapper">
+        <div className="image-container h1-container">
+          <img src={h1} alt="h1" className="base-image" />
+          <img
+            src={h1h}
+            alt="h1h"
+            className="hover-image"
+            onClick={() => handleClick('h1')}
+          />
+        </div>
 
-      {/* h2 + h2h */}
-      <div className="image-container h2-container">
-        <img src={h2} alt="h2" className="base-image" />
-        <img
-          src={h2h}
-          alt="h2h"
-          className="hover-image"
-          onClick={() => handleClick('h2')}
-        />
-      </div>
+        <div className="image-container h2-container">
+          <img src={h2} alt="h2" className="base-image" />
+          <img
+            src={h2h}
+            alt="h2h"
+            className="hover-image"
+            onClick={() => handleClick('h2')}
+          />
+        </div>
 
-      {/* h3 + h3h */}
-      <div className="image-container h3-container">
-        <img src={h3} alt="h3" className="base-image" />
-        <img
-          src={h3h}
-          alt="h3h"
-          className="hover-image"
-          onClick={() => handleClick('h3')}
-        />
-      </div>
+        <div className="image-container h3-container">
+          <img src={h3} alt="h3" className="base-image" />
+          <img
+            src={h3h}
+            alt="h3h"
+            className="hover-image"
+            onClick={() => handleClick('h3')}
+          />
+        </div>
 
-      {/* h4 + h4h */}
-      <div className="image-container h4-container">
-        <img src={h4} alt="h4" className="base-image" />
-        <img
-          src={h4h}
-          alt="h4h"
-          className="hover-image"
-          onClick={() => handleClick('h4')}
-        />
+        <div className="image-container h4-container">
+          <img src={h4} alt="h4" className="base-image" />
+          <img
+            src={h4h}
+            alt="h4h"
+            className="hover-image"
+            onClick={() => handleClick('h4')}
+          />
+        </div>
       </div>
     </div>
   );

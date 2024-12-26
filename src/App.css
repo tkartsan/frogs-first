@@ -1,18 +1,6 @@
-/* Background container for home route */
+/* Main container for alignment */
 .home {
-  background-image: url('./assets/mainblank.png'); /* Use your background */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
-  position: relative; /* Allows absolute positioning of children */
-  overflow: hidden;
-}
-
-/* Background container for /ref route */
-.ref {
-  background-image: url('./assets/main.png'); /* Use your background */
+  background-image: url('./assets/mainblank.png'); /* Restore your background */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -22,131 +10,107 @@
   overflow: hidden;
 }
 
+/* Ref background styling */
+.ref {
+  background-image: url('./assets/main.png'); /* Add your background */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Wrapper for maintaining relative positions */
+.image-wrapper {
+  position: absolute; /* Absolute positioning to maintain control over layout */
+  top: 50%; /* Center the wrapper vertically */
+  left: 50%; /* Center the wrapper horizontally */
+  transform: translate(-50%, -50%); /* Centering */
+  width: 100%; /* Full-width responsiveness */
+  height: 100%; /* Full-height responsiveness */
+  max-width: 1440px; /* Prevent overflow on wider screens */
+  max-height: 1024px; /* Prevent overflow on taller screens */
+}
+
 /* Common styles for all image containers */
 .image-container {
-  position: absolute; /* Allows precise positioning relative to parent */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Center the container at specified top and left */
-}
-
-/* Base image styles (h1, h2, h3, h4) */
-.base-image {
-  display: block; /* Ensures proper block-level behavior */
-  width: 100%; /* Match container width */
-  height: 100%; /* Match container height */
-  object-fit: cover; /* Maintain aspect ratio */
-}
-
-/* Hover image styles (h1h, h2h, h3h, h4h) */
-.hover-image {
-  position: absolute; /* Position relative to the container */
-  top: 0; /* Align with the top of the container */
-  left: 0; /* Align with the left of the container */
-  width: 100%; /* Match container width */
-  height: 100%; /* Match container height */
-  object-fit: cover; /* Maintain aspect ratio */
-  opacity: 0; /* Initially hidden */
-  visibility: hidden; /* Initially hidden */
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease; /* Smooth transition */
-  cursor: pointer; /* Indicates clickable button */
-}
-
-/* Show hover image on hover */
-.image-container:hover .hover-image {
-  opacity: 1; /* Fully visible */
-  visibility: visible; /* Make it visible */
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 /* Specific styles for h1 */
 .h1-container {
-  top: 40%; /* Vertical position */
-  left: 26%; /* Horizontal position */
-  width: 306px; /* Adjust size for h1 */
-  height: 306px;
+  top: 39%;
+  left: 20%;
+  width: 19%; /* Ensure sizing scales proportionally */
+  height: auto;
 }
 
 /* Specific styles for h2 */
 .h2-container {
-  top: 20%; /* Vertical position */
-  left: 57%; /* Horizontal position */
-  width: 300px; /* Adjust size for h2 */
-  height: 300px;
+  top: 20%;
+  left: 59%;
+  width: 19%;
+  height: auto;
 }
 
 /* Specific styles for h3 */
 .h3-container {
-  top: 50%; /* Vertical position */
-  left: 80%; /* Horizontal position */
-  width: 300px; /* Adjust size for h3 */
-  height: 400px;
-  clip-path: polygon(
-    12% 44%,
-    19% 15%,
-    25% 0,
-    74% 0,
-    79% 17%,
-    87% 44%,
-    100% 82%,
-    88% 92%,
-    80% 100%,
-    22% 100%,
-    14% 92%,
-    0 83%
-  );
+  top: 50%;
+  left: 83%;
+  width: 19%;
+  height: auto;
 }
 
 /* Specific styles for h4 */
 .h4-container {
-  top: 71%; /* Vertical position */
-  left: 24%; /* Horizontal position */
-  width: 300px; /* Adjust size for h4 */
-  height: 300px;
-  clip-path: polygon(
-    0 43%,
-    0 31%,
-    30% 0,
-    59% 0,
-    100% 36%,
-    100% 49%,
-    100% 82%,
-    100% 92%,
-    88% 93%,
-    50% 92%,
-    15% 90%,
-    0 90%
-  );
+  top: 71%;
+  left: 19%;
+  width: 19%;
+  height: auto;
 }
 
-/* Add default button styling if needed */
-button {
-  font-size: 16px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff; /* Blue background */
-  color: white; /* White text */
+/* Base image styles */
+.base-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Hover image styles */
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+/* Show hover image on hover */
+.image-container:hover .hover-image {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Responsive styling for smaller screens */
 @media (max-width: 768px) {
-  .image-container {
-    width: 150px; /* Reduce size for smaller screens */
-    height: 150px;
+  .image-wrapper {
+    max-width: 90%; /* Adjust layout for smaller screens */
+    max-height: auto;
   }
 
-  .base-image,
-  .hover-image {
-    width: 100%;
-    height: 100%;
+  .image-container {
+    width: 20%; /* Resize elements */
+    height: auto;
   }
 }

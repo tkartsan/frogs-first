@@ -21,7 +21,6 @@ function Home() {
     <div className="home">
       <div className="image-wrapper">
         <div className="image-container h1-container">
-          <div>TEST VERCEL PLWASWE</div>
           <img src={h1} alt="h1" className="base-image" />
           <img
             src={h1h}

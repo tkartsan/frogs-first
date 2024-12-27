@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-/* Wrapper for fixed aspect ratio */
+/* Wrapper for maintaining relative positions */
 .image-wrapper {
   position: relative;
   width: 100%; /* Adjust width */
@@ -31,7 +31,7 @@
 .h1-container {
   top: 39%; /* Adjusted for the fixed aspect ratio */
   left: 26%;
-  width: 15%; /* Scales proportionally */
+  width: 15%;
   height: auto;
 }
 

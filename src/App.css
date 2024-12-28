@@ -21,6 +21,82 @@
   background-position: center;
 }
 
+/* SocialHub container */
+.social-hub {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* SocialHub background */
+.image-wrapper-social {
+  position: relative;
+  width: 100%; /* Adjust width */
+  height: 0;
+  padding-top: 56.25%; /* Aspect ratio: 16:9 */
+  background-image: url('./assets/social-hub-assets/social.png');
+  background-size: 100% 100%; /* Maintain background scaling */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Social links positioning */
+.image-container-social {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 12%;
+  height: auto;
+}
+
+.discord-container {
+  top: 56%;
+  left: 50.1%;
+}
+
+.medium-container {
+  top: 64.73%;
+  left: 31.3%;
+}
+
+.twitter-container {
+  top: 65%;
+  left: 68.5%;
+}
+
+/* Base image styles */
+.base-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Hover image styles */
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+/* Show hover image on hover */
+.image-container-social:hover .hover-image {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Common styles for all image containers */
 .image-container {
   position: absolute;
@@ -59,7 +135,7 @@
   height: auto;
 }
 
-/* Base image styles */
+/* Base image styles for main page */
 .base-image {
   display: block;
   width: 100%;
@@ -67,7 +143,7 @@
   object-fit: contain;
 }
 
-/* Hover image styles */
+/* Hover image styles for main page */
 .hover-image {
   position: absolute;
   top: 0;
@@ -83,7 +159,7 @@
   cursor: pointer;
 }
 
-/* Show hover image on hover */
+/* Show hover image on hover (main page) */
 .image-container:hover .hover-image {
   opacity: 1;
   visibility: visible;
@@ -91,7 +167,8 @@
 
 /* Responsive styling for smaller screens */
 @media (max-width: 768px) {
-  .image-wrapper {
+  .image-wrapper,
+  .image-wrapper-social {
     max-width: 90%; /* Adjust layout for smaller screens */
     height: auto;
   }

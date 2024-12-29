@@ -111,7 +111,7 @@ function SocialHub() {
         </a>
 
         <a
-          href="https://twitter.com"
+          href="https://x.com/AbstractFrogz"
           target="_blank"
           rel="noopener noreferrer"
           className="image-container-social twitter-container"

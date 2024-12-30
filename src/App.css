@@ -67,6 +67,15 @@
     visibility 0.3s ease;
 }
 
+/* Pointer on hover for specified elements */
+.h1-container .hover-image,
+.h2-container .hover-image,
+.h3-container .hover-image,
+.h4-container .hover-image,
+.frog-container .hover-image {
+  cursor: pointer; /* Hand icon when hovered */
+}
+
 .image-container:hover .hover-image {
   opacity: 1;
   visibility: visible;

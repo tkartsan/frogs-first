@@ -1,4 +1,3 @@
-/* Main container for alignment */
 .home {
   position: relative;
   height: 100vh;
@@ -12,60 +11,37 @@
 /* Wrapper for maintaining relative positions */
 .image-wrapper {
   position: relative;
-  width: 100%; /* Adjust width */
+  width: 100%;
   height: 0;
   padding-top: 56.25%; /* Aspect ratio: 16:9 */
   background-image: url('./assets/mainblank.png');
-  background-size: 100% 100%; /* Maintain background scaling */
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/* SocialHub container */
-.social-hub {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-/* SocialHub background */
-.image-wrapper-social {
-  position: relative;
-  width: 100%; /* Adjust width */
-  height: 0;
-  padding-top: 56.25%; /* Aspect ratio: 16:9 */
-  background-image: url('./assets/social-hub-assets/social.png');
-  background-size: 100% 100%; /* Maintain background scaling */
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Social links positioning */
-.image-container-social {
+/* Button container */
+.button-container {
   position: absolute;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 12%;
+  top: 12%; /* Adjusted higher for better visibility */
+  right: 2%; /* Positioned at the right */
+  display: flex;
+  gap: 2%; /* Space between buttons */
+  z-index: 100; /* Ensure visibility above all elements */
+  width: 14%; /* Matches scaling logic */
   height: auto;
 }
 
-.discord-container {
-  top: 56%;
-  left: 50.1%;
+/* Button images */
+.button-image {
+  width: 100%; /* Buttons fill the container proportionally */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.medium-container {
-  top: 64.73%;
-  left: 31.3%;
-}
-
-.twitter-container {
-  top: 65%;
-  left: 68.5%;
+.button-image:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 /* Base image styles */
@@ -91,90 +67,83 @@
     visibility 0.3s ease;
 }
 
-/* Show hover image on hover */
-.image-container-social:hover .hover-image {
+.image-container:hover .hover-image {
   opacity: 1;
   visibility: visible;
 }
 
-/* Common styles for all image containers */
-.image-container {
-  position: absolute;
-  transform: translate(-50%, -50%);
-}
-
 /* Specific styles for h1 */
 .h1-container {
-  top: 39%; /* Adjusted for the fixed aspect ratio */
-  left: 26%;
-  width: 15%;
+  position: absolute;
+  top: 20%; /* Matches proportional scaling */
+  left: 18%;
+  width: 14%;
   height: auto;
 }
 
 /* Specific styles for h2 */
 .h2-container {
-  top: 30%;
-  left: 55%;
-  width: 14%;
+  position: absolute;
+  top: 10%;
+  left: 48%;
+  width: 16%;
   height: auto;
 }
 
 /* Specific styles for h3 */
 .h3-container {
-  top: 50%;
-  left: 75%;
+  position: absolute;
+  top: 25%;
+  left: 70%;
   width: 14%;
   height: auto;
 }
 
 /* Specific styles for h4 */
 .h4-container {
-  top: 68%;
-  left: 30%;
+  position: absolute;
+  top: 45%;
+  left: 25%;
   width: 15%;
   height: auto;
 }
 
-/* Base image styles for main page */
-.base-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+/* Responsive styling for laptop ratios */
+@media (min-aspect-ratio: 16/10) {
+  .button-container {
+    top: 13%; /* Adjusted for wider screens */
+    right: 3%; /* Matches proportional scaling */
+    gap: 1.5%; /* Reduced gap */
+    width: 12%; /* Adjusted container width */
+  }
 
-/* Hover image styles for main page */
-.hover-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
-  cursor: pointer;
-}
-
-/* Show hover image on hover (main page) */
-.image-container:hover .hover-image {
-  opacity: 1;
-  visibility: visible;
+  .button-image {
+    width: 100%; /* Buttons fill the container width proportionally */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
 
 /* Responsive styling for smaller screens */
 @media (max-width: 768px) {
-  .image-wrapper,
-  .image-wrapper-social {
+  .image-wrapper {
     max-width: 90%; /* Adjust layout for smaller screens */
     height: auto;
   }
 
+  .button-container {
+    top: 13%; /* Adjusted for better visibility on smaller screens */
+    right: 5%;
+    gap: 2%;
+    width: 10%; /* Adjust container width */
+  }
+
+  .button-image {
+    width: 100%; /* Buttons fill the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
   .image-container {
-    width: 15%; /* Resize elements */
+    width: 15%;
     height: auto;
   }
 }

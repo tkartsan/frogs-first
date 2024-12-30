@@ -8,6 +8,9 @@ import {
   useNavigate,
 } from 'react-router-dom';
 
+import d from './assets/additional-assets/d.png';
+import m from './assets/additional-assets/m.png';
+import x from './assets/additional-assets/x.png';
 import h1 from './assets/h1.png';
 import h1h from './assets/h1h.png';
 import h2 from './assets/h2.png';
@@ -16,13 +19,6 @@ import h3 from './assets/h3.png';
 import h3h from './assets/h3h.png';
 import h4 from './assets/h4.png';
 import h4h from './assets/h4h.png';
-import discordHover from './assets/social-hub-assets/disco_h.png';
-import discord from './assets/social-hub-assets/discord.png';
-import medium from './assets/social-hub-assets/medium.png';
-import mediumHover from './assets/social-hub-assets/medium_h.png';
-import socialBackground from './assets/social-hub-assets/social.png';
-import twitter from './assets/social-hub-assets/x.png';
-import twitterHover from './assets/social-hub-assets/x_h.png';
 
 function Home() {
   const navigate = useNavigate();
@@ -38,6 +34,31 @@ function Home() {
   return (
     <div className="home">
       <div className="image-wrapper">
+        {/* Top-right button container */}
+        <div className="button-container">
+          <a
+            href="https://example1.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={d} alt="Button D" className="button-image" />
+          </a>
+          <a
+            href="https://example2.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={x} alt="Button X" className="button-image" />
+          </a>
+          <a
+            href="https://example3.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={m} alt="Button M" className="button-image" />
+          </a>
+        </div>
+
         {/* h1 */}
         <div className="image-container h1-container">
           <img src={h1} alt="h1" className="base-image" />
@@ -87,41 +108,7 @@ function Home() {
 }
 
 function SocialHub() {
-  return (
-    <div className="social-hub">
-      <div className="image-wrapper-social">
-        <a
-          href="https://discord.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="image-container-social discord-container"
-        >
-          <img src={discord} alt="Discord" className="base-image" />
-          <img src={discordHover} alt="Discord Hover" className="hover-image" />
-        </a>
-
-        <a
-          href="https://medium.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="image-container-social medium-container"
-        >
-          <img src={medium} alt="Medium" className="base-image" />
-          <img src={mediumHover} alt="Medium Hover" className="hover-image" />
-        </a>
-
-        <a
-          href="https://x.com/AbstractFrogz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="image-container-social twitter-container"
-        >
-          <img src={twitter} alt="Twitter" className="base-image" />
-          <img src={twitterHover} alt="Twitter Hover" className="hover-image" />
-        </a>
-      </div>
-    </div>
-  );
+  return <div></div>;
 }
 
 function App() {

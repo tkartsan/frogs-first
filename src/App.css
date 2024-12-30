@@ -23,25 +23,25 @@
 /* Button container */
 .button-container {
   position: absolute;
-  top: 9%; /* Reduced to 9% */
-  right: 2%; /* Positioned at the right */
+  top: 9%;
+  right: 2%;
   display: flex;
-  gap: 2%; /* Space between buttons */
-  z-index: 100; /* Ensure visibility above all elements */
-  width: 14%; /* Matches scaling logic */
+  gap: 2%;
+  z-index: 100;
+  width: 14%;
   height: auto;
 }
 
 /* Button images */
 .button-image {
-  width: 100%; /* Buttons fill the container proportionally */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
 
 .button-image:hover {
-  transform: scale(1.1); /* Slightly enlarge on hover */
+  transform: scale(1.1);
 }
 
 /* Base image styles */
@@ -75,7 +75,7 @@
 /* Specific styles for h1 */
 .h1-container {
   position: absolute;
-  top: 20%; /* Matches proportional scaling */
+  top: 20%;
   left: 18%;
   width: 14%;
   height: auto;
@@ -108,42 +108,43 @@
   height: auto;
 }
 
-/* Responsive styling for laptop ratios */
-@media (min-aspect-ratio: 16/10) {
-  .button-container {
-    top: 10%; /* Reduced for wider screens */
-    right: 3%; /* Matches proportional scaling */
-    gap: 1.5%; /* Reduced gap */
-    width: 12%; /* Adjusted container width */
-  }
-
-  .button-image {
-    width: 100%; /* Buttons fill the container width proportionally */
-    height: auto; /* Maintain aspect ratio */
-  }
+/* Frog container styles */
+.frog-container {
+  position: absolute;
+  bottom: 7.5%;
+  right: 2%;
+  width: 30%;
+  height: auto;
+  transform: translate(0, 0);
 }
 
-/* Responsive styling for smaller screens */
+.frog-container:hover .hover-image {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive styling */
 @media (max-width: 768px) {
   .image-wrapper {
-    max-width: 90%; /* Adjust layout for smaller screens */
+    max-width: 90%;
     height: auto;
   }
 
   .button-container {
-    top: 10%; /* Reduced for better alignment */
+    top: 10%;
     right: 5%;
     gap: 2%;
-    width: 10%; /* Adjust container width */
+    width: 10%;
+  }
+
+  .frog-container {
+    bottom: 7%;
+    right: 6%;
+    width: 12%;
   }
 
   .button-image {
-    width: 100%; /* Buttons fill the container */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .image-container {
-    width: 15%;
+    width: 100%;
     height: auto;
   }
 }

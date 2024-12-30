@@ -9,6 +9,8 @@ import {
 } from 'react-router-dom';
 
 import d from './assets/additional-assets/d.png';
+import frog from './assets/additional-assets/frog.png';
+import frogHover from './assets/additional-assets/frog_h.png';
 import m from './assets/additional-assets/m.png';
 import x from './assets/additional-assets/x.png';
 import h1 from './assets/h1.png';
@@ -100,6 +102,17 @@ function Home() {
             alt="h4h"
             className="hover-image"
             onClick={() => handleClick('h4')}
+          />
+        </div>
+
+        {/* Frog object */}
+        <div className="image-container frog-container">
+          <img src={frog} alt="Frog" className="base-image" />
+          <img
+            src={frogHover}
+            alt="Frog Hover"
+            className="hover-image"
+            onClick={() => handleClick('frog')}
           />
         </div>
       </div>

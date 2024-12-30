@@ -23,7 +23,7 @@
 /* Button container */
 .button-container {
   position: absolute;
-  top: 12%; /* Adjusted higher for better visibility */
+  top: 9%; /* Reduced to 9% */
   right: 2%; /* Positioned at the right */
   display: flex;
   gap: 2%; /* Space between buttons */
@@ -111,7 +111,7 @@
 /* Responsive styling for laptop ratios */
 @media (min-aspect-ratio: 16/10) {
   .button-container {
-    top: 13%; /* Adjusted for wider screens */
+    top: 10%; /* Reduced for wider screens */
     right: 3%; /* Matches proportional scaling */
     gap: 1.5%; /* Reduced gap */
     width: 12%; /* Adjusted container width */
@@ -131,7 +131,7 @@
   }
 
   .button-container {
-    top: 13%; /* Adjusted for better visibility on smaller screens */
+    top: 10%; /* Reduced for better alignment */
     right: 5%;
     gap: 2%;
     width: 10%; /* Adjust container width */
